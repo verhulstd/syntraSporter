@@ -10,5 +10,11 @@ class Log {
   get distance() {
     return this.#distance;
   }
+  get sport() {
+    return this.#sport;
+  }
+  get duration() {
+    return this.#duration;
+  }
 }
 export default Log;
