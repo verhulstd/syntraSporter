@@ -38,3 +38,18 @@ console.log(sporter1.getAvg("distance", "cycling"));
 console.log(sporter1.getAvg("duration", "cycling"));
 console.log(sporter1.getAvg("distance", "swimming"));
 console.log(sporter1.getAvg("duration", "swimming"));
+
+// // 1)
+// sporter1.getMaxRunningDistanceLog()
+// // 1) uitbreiding =>
+// sporter1.getLog("max", "distance", "running")
+// sporter1.getLog("min", "duration", "cycling")
+
+// 2)
+// sporter1.getAvgSpeed("running") // get speed 2decimals of certain sport km/min => km/u
+// sporter1.getAvgSpeed("swimming") // get speed 2decimals of certain sport km/min => km/u
+
+// // get sporter name and age with the highest running avg speed
+// [sporter1,sporter2,sporter3]
+//     .filter(s=>s.age>30)
+//     .map(s=>s.getAvg("distance","running"))
