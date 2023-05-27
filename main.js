@@ -16,6 +16,7 @@ sporter2.train("cycling", 22, 50);
 sporter2.train("running", 10, 60);
 
 sporter3.train("cycling", 20, 45);
+sporter3.train("cycling", 20, 45);
 
 console.log(sporter1.getTotalDistance());
 console.log(sporter2.getTotalDistance());
