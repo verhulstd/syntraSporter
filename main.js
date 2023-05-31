@@ -19,7 +19,7 @@ sporter2.train("cycling", 22, 50);
 sporter2.train("running", 10, 60);
 
 sporter3.train("cycling", 20, 45);
-sporter3.train("cycling", 20, 45);
+sporter3.train("cycling", 22, 47);
 
 // console.log(sporter1.getTotal());
 //console.log(sporter1.getTotal("duration")); // 55
@@ -32,15 +32,17 @@ sporter3.train("cycling", 20, 45);
 // console.log(sporter1.getTotal("duration", "cycling")); // 95
 // console.log(sporter1.getTotal("duration", "running")); // 60
 
-console.log(sporter1.getAvg("distance", "running"));
-console.log(sporter1.getAvg("duration", "running"));
-console.log(sporter1.getAvg("distance", "cycling"));
-console.log(sporter1.getAvg("duration", "cycling"));
-console.log(sporter1.getAvg("distance", "swimming"));
-console.log(sporter1.getAvg("duration", "swimming"));
+// console.log(sporter1.getAvg("distance", "running"));
+// console.log(sporter1.getAvg("duration", "running"));
+// console.log(sporter1.getAvg("distance", "cycling"));
+// console.log(sporter1.getAvg("duration", "cycling"));
+// console.log(sporter1.getAvg("distance", "swimming"));
+// console.log(sporter1.getAvg("duration", "swimming"));
 
 // // 1)
-// sporter1.getMaxRunningDistanceLog()
+// console.log(sporter1.getLog("running", "max", "distance"));
+// console.log(sporter3.getLog("cycling", "max", "duration"));
+
 // // 1) uitbreiding =>
 // sporter1.getLog("max", "distance", "running")
 // sporter1.getLog("min", "duration", "cycling")
@@ -50,6 +52,10 @@ console.log(sporter1.getAvg("duration", "swimming"));
 // sporter1.getAvgSpeed("swimming") // get speed 2decimals of certain sport km/min => km/u
 
 // // get sporter name and age with the highest running avg speed
-// [sporter1,sporter2,sporter3]
+//
 //     .filter(s=>s.age>30)
 //     .map(s=>s.getAvg("distance","running"))
+
+console.log(getMostLogs([sporter1, sporter2, sporter3]));
+
+Sporter.getMostLogs([sporter1, sporter2, sporter3]);

@@ -32,7 +32,9 @@ class Sporter {
       .filter((log) => (sport ? log.sport === sport : true))
       .reduce((acc, log) => acc + log[property], 0);
   };
-
+  getTotalLogs() {
+    return this.#list.length;
+  }
   getAvg(property, sport) {
     return (
       this.getTotal(property, sport) /
@@ -40,9 +42,46 @@ class Sporter {
     );
   }
 
+  getLog(sport, sortType, property) {
+    return Math[sortType](
+      ...this.#list
+        .filter((logObject) => logObject.sport === sport)
+        .map((log) => log[property])
+    );
+    // const filteredLogs = this.#list.filter(
+    //   (logObject) => logObject.sport === sport
+    // );
+    // return filteredLogs.sort((a, b) => {
+    //   return a[property] - b[property];
+    // })[sortType === "min" ? 0 : filteredLogs.length - 1];
+  }
+  get name() {
+    return this.#name;
+  }
   get list() {
     return this.#list;
+  }
+  static getMostLogs(sporters) {
+    return sporters
+      .map((sporter) => {
+        return {
+          name: sporter.name,
+          totalLogs: sporter.getTotalLogs(),
+        };
+      })
+      .sort((a, b) => b.totalLogs - a.totalLogs)[0].name;
   }
 }
 
 export default Sporter;
+
+// const getallen = [4,8,12,6]
+// getallen.sort((a,b)=>{return a-b})
+
+// person = {
+//   name : "David",
+//   age : 42,
+//   test : function(){}
+// }
+
+// person["test"]()
